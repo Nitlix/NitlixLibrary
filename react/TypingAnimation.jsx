@@ -1,16 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-
-
-export default function({messages=[]}){
+export default function({messages=[], typingSpeed=100, typingSleepTime=500, erasingSpeed=50, erasingSleepTime=1000}){
     const animationEl = useRef(null);
     useEffect(()=>{
         const animation = animationEl.current;
-        const typingspeed = 100;
-        const typingSleepTime = 500;
-        const erasingSpeed = 50;
-        const erasingSleepTime = 1000;
         let breaking = false;
 
         // Array of messages to type
@@ -48,7 +42,7 @@ export default function({messages=[]}){
             await type()
         }
 
-    
+
 
         async function type() {
             const msg = messages[msgIndex].text;
@@ -59,7 +53,7 @@ export default function({messages=[]}){
                 animation.innerHTML += letter;
 
                 //Sleep until next letter
-                await new Promise((resolve) => setTimeout(resolve, typingspeed));
+                await new Promise((resolve) => setTimeout(resolve, typingSpeed));
             }
 
             animation.innerHTML += messages[msgIndex].emoji;

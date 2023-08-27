@@ -1,16 +1,13 @@
 {
   "name": "nitlix",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "🚀 A small collection of styles and scripts to super-power your next web app.",
+  "version": "1.0.1",
   "exports": {
     "./react/*": "./react/*.jsx",
     "./css/*": "./css/*.css",
-    "./css/*": "./css/*.scss"
+    "./scss/*": "./css/*.scss"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["react", "tools", "library", "scss", "styles", "scripts", "components", "nitlix"],
+  "author": "nitlix",
+  "license": "MIT"
 }

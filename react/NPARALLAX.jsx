@@ -1,4 +1,4 @@
-const NPARALLAX = {
+export default {
     actions: {
         up: (object, move) =>{
             return object.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -" + move + ", 0, 1)";
@@ -83,5 +83,5 @@ const NPARALLAX = {
 
         render();
         return bind;
-    },
+    }
 }
